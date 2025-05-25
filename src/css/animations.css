@@ -1,0 +1,304 @@
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+/* Enhanced Animations and Transitions */
+.nav-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+  color: #8dd3bb !important;
+}
+
+.nav-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.flight-card {
+  animation: slideIn 0.5s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(17, 34, 17, 0.1);
+}
+
+.flight-price {
+  animation: pulseScale 2s infinite ease-in-out;
+}
+
+.airline-info {
+  transition: transform 0.3s ease;
+}
+
+.airline-info:hover {
+  transform: scale(1.02);
+}
+
+.continue-btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.continue-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.continue-btn:hover {
+  background: #7ac4aa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 211, 187, 0.3);
+}
+
+.social-btn {
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 211, 187, 0.2);
+  border-color: #8dd3bb;
+}
+
+.rating {
+  transition: transform 0.3s ease;
+}
+
+.rating:hover {
+  transform: scale(1.05);
+}
+
+.newsletter-content {
+  animation: fadeIn 1s ease;
+}
+
+.newsletter-form button {
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.newsletter-form input {
+  transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.3);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .content-wrapper {
+    margin: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .flight-card {
+    padding: 20px 16px;
+  }
+
+  .flight-schedule {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .schedule-separator {
+    transform: rotate(90deg);
+    margin: 20px 0;
+  }
+
+  .payment-options {
+    padding: 12px;
+  }
+
+  .newsletter-content {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .newsletter-text h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .social-buttons {
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    flex: 1 1 calc(50% - 8px);
+  }
+}
+
+/* Loading States and Animations */
+@keyframes skeletonLoading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+}
+
+/* Interactive Elements */
+.flight-info span,
+.schedule-item time,
+.schedule-item p {
+  transition: color 0.3s ease;
+}
+
+.flight-info span:hover,
+.schedule-item time:hover,
+.schedule-item p:hover {
+  color: #8dd3bb;
+}
+
+.breadcrumb span {
+  transition: all 0.3s ease;
+}
+
+.breadcrumb span:hover {
+  color: #8dd3bb;
+  cursor: pointer;
+}
+
+/* Smooth Page Load */
+.booking-detail {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Payment Options Enhancement */
+.payment-option {
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 211, 187, 0.2);
+}
+
+.full-payment {
+  position: relative;
+  overflow: hidden;
+}
+
+.full-payment::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* View Details Button Animation */
+.view-details-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(141, 211, 187, 0.4);
+}
+
+.view-details-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #8dd3bb;
+  border-radius: 4px;
+  color: #112211;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-details-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.view-details-btn:hover {
+  background: #7ac4aa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 211, 187, 0.3);
+}
+
+.view-details-btn .arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .arrow-icon {
+  transform: translateX(4px) rotate(-90deg);
+}

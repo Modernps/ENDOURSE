@@ -1,665 +1,617 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #112211;
+  line-height: 1.5;
+}
+
 .flight-detail-page {
-    background-color: #fafbfc;
-    display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+header {
+   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 21px 5%;
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.left-nav {
+  justify-content: flex-start;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #112211;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+  color: #8dd3bb;
+}
+
+/* Main content container */
+.flight-detail-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content section */
+.content-section {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  color: #FF8682;
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #FF8682;
+}
+
+.breadcrumb-separator {
+  width: 16px;
+  height: 16px;
+}
+
+/* Flight details header */
+.flight-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.flight-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flight-title {
+  font-family: 'TradeGothic LT Extended', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.flight-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(17, 34, 17, 0.75);
+  font-size: 14px;
+}
+
+.flight-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-box {
+  border-radius: 4px;
+  border: 1px solid #8dd3bb;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Price and booking section */
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #8dd3bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #8dd3bb;
+  transform: translateY(-3px);
+}
+
+.book-button {
+  background-color: #8dd3bb;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #7ac1a9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(141, 211, 187, 0.4);
+}
+
+/* Flight features section */
+.features-section {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.section-title {
+  font-family: 'TradeGothic LT Extended', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.feature-options {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.feature-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  justify-content: center;
+}
+
+.feature-image {
+  border-radius: 12px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+  transform: scale(1.05);
+}
+
+/* Airline policies section */
+.policies-section {
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(141, 211, 187, 0.6);
+  border-radius: 8px;
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.policy {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 45%;
+}
+
+.policy-text {
+  color: rgba(17, 34, 17, 0.75);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Flight card section */
+.flight-card {
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 32px 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.flight-date {
+  font-family: 'TradeGothic LT Extended', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.airline-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 31px;
+  border: 0.5px solid #8dd3bb;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.airline-logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+.airline-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.airline-model {
+  color: rgba(17, 34, 17, 0.6);
+  font-size: 14px;
+}
+
+.flight-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-time {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.schedule-airport {
+  font-size: 16px;
+  color: rgba(17, 34, 17, 0.6);
+  font-weight: 500;
+}
+
+.schedule-separator {
+  flex: 1;
+  max-width: 168px;
+  object-fit: contain;
+}
+
+.flight-duration {
+  text-align: center;
+  color: rgba(17, 34, 17, 0.75);
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.amenities {
+  max-width: 360px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+/* Footer styles */
+.footer-container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+footer {
+  width: 100%;
+  background-color: #8dd3bb;
+  padding: 32px 5% 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.newsletter {
+  width: 100%;
+  max-width: 1232px;
+  background-color: #cdeae1;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-content {
+  max-width: 593px;
+}
+
+.newsletter-title {
+  font-family: 'TradeGothic LT Extended', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 20px;
+}
+
+.newsletter-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.newsletter-text {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 16px;
+}
+
+.newsletter-input {
+  flex: 1;
+  border-radius: 4px;
+  background-color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.subscribe-button {
+  background-color: #112211;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #1d3b1d;
+}
+
+.footer-links {
+  width: 100%;
+  max-width: 1232px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 24px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-column {
+  min-width: 150px;
+}
+
+.footer-column-title {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .flight-details-header {
     flex-direction: column;
-    overflow: hidden;
-    align-items: stretch;
-    font-family:
-      Montserrat,
-      -apple-system,
-      Roboto,
-      Helvetica,
-      sans-serif;
-    
-  }
-  
-  .hero-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .main-header {
-    background-color: #fff;
-    padding: 21px 104px;
-    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 32px;
-  }
-  
-  .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    color: #121;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .nav-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-  
-  .logo {
-    width: 20px;
-    height: 36px;
-  }
-  
-  .user-actions {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-  
-  .favorites-link {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    color: #121;
-  }
-  
-  .separator {
-    color: #121;
-    font-weight: 600;
-  }
-  
-  .user-profile {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  
-  .user-avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-  }
-  
-  .user-name {
-    color: #121;
-    font-weight: 600;
-  }
-  
-  .dropdown-icon {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .hero-image {
-    width: 150px;
-    margin-top: 1%;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .content-section {
-    padding: 67px 80px;
-  }
-  
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: black;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 12px;
-  }
-  
-  .breadcrumb-arrow {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .hotel-info {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    margin-top: 31px;
-    gap: 40px;
+    gap: 30px;
   }
   
-  .hotel-details {
-    max-width: 374px;
+  .price-container {
+    align-items: flex-start;
   }
   
-  .hotel-name {
-    font-family:
-      "TradeGothic LT Extended",
-      -apple-system,
-      Roboto,
-      Helvetica,
-      sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #121;
+  .feature-image-grid {
+    justify-content: flex-start;
   }
   
-  .hotel-address {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 16px;
-    font-style: normal;
-    color: rgba(18, 17, 17, 0.75);
-    font-size: 14px;
+  .policy {
+    max-width: 100%;
   }
-  
-  .address-icon {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .rating-section {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .rating-score {
-    padding: 9px 11px;
-    border: 1px solid #8dd3bb;
-    border-radius: 4px;
-    font-size: 12px;
-  }
-  
-  .rating-text {
-    font-size: 12px;
-    color: #121;
-  }
-  
-  .booking-section {
-    text-align: right;
-  }
-  
-  .price {
-    font-size: 32px;
-    color: #ff8682;
-    font-weight: 700;
-    margin: 0;
-    padding: 10px;
-  }
-  
-  .booking-actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 6px;
-  }
-  
-  .action-button {
-    width: 48px;
-    height: 48px;
-    border: 1px solid #8dd3bb;
-    border-radius: 4px;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .action-button img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .book-now {
-    background-color: #8dd3bb;
-    border: none;
-    border-radius: 4px;
-    padding: 16px;
-    color: #121;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 991px) {
-    .main-header {
-      padding: 21px 20px;
-    }
-  
-    .content-section {
-      padding: 40px 20px;
-    }
-  
-    .hotel-info {
-      flex-direction: column;
-    }
-  
-    .hotel-details {
-      max-width: 100%;
-    }
-  
-    .booking-section {
-      width: 100%;
-      text-align: left;
-    }
-  }
+}
 
-
-
-.hotel-overview-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 53px;
-    aspect-ratio: 3.17;
-    object-fit: contain;
-  }
-  
-  .features-section {
-    margin-top: 65px;
-  }
-  
-  .section-title {
-    font-family:
-      "TradeGothic LT Extended",
-      -apple-system,
-      Roboto,
-      Helvetica,
-      sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #121;
-  }
-  
-  .class-options {
-    display: flex;
-    gap: 24px;
-    margin-top: 20px;
-  }
-  
-  .class-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: none;
-    color: #121;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .class-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .feature-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 19px;
-    margin-top: 24px;
-  }
-  
-  .feature-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    object-fit: contain;
-  }
-  
-  .airline-policies {
-    background-color: rgba(141, 211, 187, 0.6);
-    border-radius: 8px;
-    padding: 16px;
-    margin-top: 40px;
-  }
-  
-  .policy-list {
-    list-style: none;
-    padding: 0;
-    margin: 16px 0 0;
-  }
-  
-  .policy-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgba(18, 17, 17, 0.75);
-  }
-  
-  .policy-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
+@media screen and (max-width: 992px) {
   .flight-schedule {
-    margin-top: 40px;
-  }
-  
-  .schedule-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
-    padding: 32px 23px 32px 8px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .schedule-title {
-    font-family:
-      "TradeGothic LT Extended",
-      -apple-system,
-      Roboto,
-      Helvetica,
-      sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #121;
-  }
-  
-  .airline-details {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-top: 24px;
-    padding: 16px 32px;
-    border: 0.5px solid #8dd3bb;
-    border-radius: 8px;
-  }
-  
-  .airline-logo {
-    width: 64px;
-    aspect-ratio: 1.42;
-    object-fit: contain;
-  }
-  
-  .airline-info h4 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-  }
-  
-  .airline-info p {
-    font-size: 14px;
-    color: rgba(18, 17, 17, 0.6);
-    margin: 8px 0 0;
-  }
-  
-  .flight-time {
-    display: flex;
-    gap: 16px;
-    margin-top: 49px;
-  }
-  
-  .flight-time time {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  .flight-time p {
-    font-size: 16px;
-    color: rgba(18, 17, 17, 0.6);
-    margin: auto 0;
-  }
-  
-  .flight-duration {
-    text-align: right;
-  }
-  
-  .duration-text {
-    font-size: 20px;
-    color: rgba(18, 17, 17, 0.75);
-  }
-  
-  .duration-icon {
-    width: 393px;
-    aspect-ratio: 3.75;
-    object-fit: contain;
-    margin: 25px 0;
-  }
-  
-  .arrival-info {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .arrival-info time {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  .arrival-info p {
-    font-size: 16px;
-    color: rgba(18, 17, 17, 0.6);
-    margin: auto 0;
-  }
-  .schedule-separator {
-    width: 174px;
-    object-fit: contain;
-    margin-top: 10px;
-    position: relative;
-  }
-  .newsletter {
-    background: #8dd3bb;
-    padding: 0 80px 84px;
-    margin-top: 275px;
-  }
-  
-  .newsletter-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 147px;
-    background: #cdeae1;
-    border-radius: 20px;
-    padding: 26px;
-    margin-top: -116px;
-    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
-  }
-  
-  .newsletter-text {
-    flex: 1;
-    max-width: 593px;
-    padding: 17px 0;
-  }
-  
-  .newsletter-text h2 {
-    font-family: "TradeGothic LT Extended", sans-serif;
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 54px;
-    color: #000;
-  }
-  
-  .newsletter-description {
-    margin-top: 8px;
-  }
-  
-  .newsletter-description h3 {
-    font-family: "TradeGothic LT Extended", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    opacity: 0.8;
-    color: #000;
-  }
-  
-  .newsletter-description p {
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.7;
-    margin-top: 8px;
-    color: #000;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    gap: 16px;
-    margin-top: 16px;
-  }
-  
-  .newsletter-form input {
-    flex: 1;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-  }
-  
-  .newsletter-form button {
-    padding: 8px 16px;
-    background: #121;
-    border: none;
-    border-radius: 4px;
-    color:white;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .newsletter-image {
-    width: 433px;
-    object-fit: contain;
-  }
-  
-  .site-footer {
-    background: #8dd3bb;
-    padding: 30px 80px;
-  }
-  
-  .footer-content {
-    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
   
-  .footer-brand {
-    width: 16%;
-    padding: 10px;
-    display: flex;
-    align-items: start; 
-    justify-content: space-between; 
+  .schedule-separator {
+    transform: rotate(90deg);
+    margin: 20px 0;
   }
   
-  
-  
-  .footer-logo {
-    width: 160px;
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
-  .social-links {
-    display: flex;
-    gap: 12px;
-    align-items:start;
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    padding: 15px 3%;
   }
   
-  .social-links img {
-    width: 20px;
-    height: 20px;
+  .logo-container {
+    order: -1;
   }
   
-  .footer-nav {
-    width: 84%;
-    display: flex;
+  .nav-item span {
+    display: none;
+  }
+  
+  .feature-options {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
     flex-wrap: wrap;
-    gap: 24px;
   }
   
-  .footer-section {
-    width: 176px;
-    min-height: 140px;
+  .airline-container {
+    padding: 15px;
   }
   
-  .footer-section h4 {
-    font-family: "TradeGothic LT Extended", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000;
+  .footer-column {
+    min-width: calc(50% - 20px);
   }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 16px 0 0;
-  }
-  
-  .footer-section li {
-    margin-top: 12px;
-  }
-  
-  .footer-section a {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    opacity: 0.7;
-    text-decoration: none;
-  }
+}
 
-  @media (max-width: 991px) {
-    .main-header {
-      padding: 21px 20px;
-    }
+@media screen and (max-width: 576px) {
+  .flight-title {
+    font-size: 20px;
+  }
   
-    .content-section {
-      padding: 40px 20px;
-    }
+  .price {
+    font-size: 24px;
+  }
   
-    .hotel-info {
-      flex-direction: column;
-    }
+  .book-button {
+    width: 100%;
+    text-align: center;
+  }
   
-    .hotel-details {
-      max-width: 100%;
-    }
+  .newsletter-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
   
-    .booking-section {
-      width: 100%;
-      text-align: left;
-    }
-    .newsletter {
-        padding: 0 20px 84px;
-      }
-    
-      .newsletter-content {
-        flex-direction: column;
-        gap: 40px;
-        padding: 20px;
-      }
-    
-      .newsletter-text,
-      .newsletter-image {
-        max-width: 100%;
-      }
-    
-      .site-footer {
-        padding: 30px 20px;
-      }
-    
-      .footer-content {
-        flex-direction: column;
-      }
-    
-      .footer-brand,
-      .footer-nav {
-        width: 100%;
-      }
-    
-      .footer-section {
-        width: 100%;
-        min-height: auto;
-      }
-    }
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    min-width: 100%;
+  }
+}
 
-  
-  
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+

@@ -26,7 +26,6 @@
   100% { background-position: 100% 0; }
 }
 
-/* Enhanced Animations and Transitions */
 .nav-item {
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -134,7 +133,6 @@
   box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.3);
 }
 
-/* Responsive Enhancements */
 @media (max-width: 768px) {
   .content-wrapper {
     margin: 20px;
@@ -180,7 +178,6 @@
   }
 }
 
-/* Loading States and Animations */
 @keyframes skeletonLoading {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -192,7 +189,6 @@
   animation: skeletonLoading 1.5s infinite;
 }
 
-/* Interactive Elements */
 .flight-info span,
 .schedule-item time,
 .schedule-item p {
@@ -214,13 +210,11 @@
   cursor: pointer;
 }
 
-/* Smooth Page Load */
 .booking-detail {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Payment Options Enhancement */
 .payment-option {
   transition: all 0.3s ease;
 }
@@ -246,7 +240,6 @@
   animation: shimmer 2s infinite;
 }
 
-/* View Details Button Animation */
 .view-details-wrapper {
   display: flex;
   justify-content: flex-end;

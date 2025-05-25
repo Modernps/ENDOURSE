@@ -90,6 +90,7 @@ session_start();
                       <label for="password" class="input-label">Password</label>
                     </div>
                     <button
+                      src="./src/assets/images/hide-password.svg"
                       type="button"
                       class="password-toggle"
                       aria-label="Toggle password visibility"

@@ -5,17 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.querySelector('.login-button');
     const passwordToggle = document.querySelector('.password-toggle');
 
-    // Password visibility toggle
     passwordToggle.innerHTML = '<img src="./src/assets/images/eye.svg" alt="Show password" />';
     passwordToggle.addEventListener('click', () => {
         const type = passwordInput.type === 'password' ? 'text' : 'password';
         passwordInput.type = type;
         passwordToggle.innerHTML = type === 'password' 
-            ? '<img src="./src/assets/images/eye.svg" alt="Show password" />'
+            ? '<img src="./src/assets/images/hide-password.svg" alt="Show password" />'
             : '<img src="./src/assets/images/eye-off.svg" alt="Hide password" />';
     });
 
-    // Form validation
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Show loading state
         loginButton.disabled = true;
         loginButton.innerHTML = '<span class="spinner"></span> Logging in...';
 

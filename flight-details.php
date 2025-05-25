@@ -142,7 +142,6 @@
               </div>
             </div>
             
-            <!-- First Flight Card -->
             <div class="flight-card fade-in">
               <h3 class="flight-date">Return Wed, Dec 8</h3>
               <div class="flight-duration">2h 28m</div>
@@ -172,7 +171,6 @@
               </div>
             </div>
             
-            <!-- Second Flight Card -->
             <div class="flight-card fade-in">
               <h3 class="flight-date">Return Wed, Dec 8</h3>
               <div class="flight-duration">2h 28m</div>

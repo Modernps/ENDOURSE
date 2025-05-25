@@ -1,0 +1,721 @@
+.booking-detail {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 21px 104px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .user-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .separator {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+  
+  .hero-image {
+    width: 150px;
+    margin: -78px auto 0;
+    z-index: 10;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 56px 0 0 104px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .breadcrumb-separator {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    margin: 29px 80px;
+    gap: 40px;
+  }
+  
+  .booking-summary {
+    flex: 1;
+    max-width: 790px;
+  }
+  
+  .flight-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .flight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flight-title h1 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .flight-price {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff8682;
+  }
+  
+  .flight-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    color: #000;
+  }
+  
+  .flight-info span:first-child {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .flight-info span:last-child {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.75;
+  }
+  
+  .flight-details {
+    margin-top: 24px;
+  }
+  
+  .airline-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 32px;
+    border: 0.5px solid #8dd3bb;
+    border-radius: 8px;
+    background: #fff;
+    width: 170px; 
+    max-width: 100%
+    
+  }
+  
+  .airline-logo {
+    width: 64px;
+    height: 44px;
+    object-fit: contain;
+  }
+  
+  .airline-name {
+    color: #000;
+  }
+  
+  .airline-name h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .airline-name p {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 8px;
+  }
+  
+  .flight-path {
+    flex: 2;
+    height: 100px;
+    object-fit: contain;
+    max-width: 230%;
+  }
+  
+  .flight-schedule {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-right: 13px;
+  }
+  
+  .schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .schedule-item time {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .schedule-item p {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.6;
+  }
+  
+  .schedule-separator {
+    width: 174px;
+    object-fit: contain;
+  }
+  
+  .payment-options {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .payment-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .full-payment {
+    background: #8dd3bb;
+  }
+  
+  .option-content h3 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .option-content p {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #000;
+  }
+  
+  .radio-button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .radio-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .more-info {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-top: 12px;
+    color: #000;
+  }
+  
+  .login-section {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .login-section h2 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .phone-input {
+    margin-top: 16px;
+  }
+  
+  .phone-input label {
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .phone-input input {
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #79747e;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .terms {
+    font-size: 14px;
+    margin-top: 16px;
+    color: #000;
+  }
+  
+  .terms a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .continue-btn {
+    width: 100%;
+    padding: 14px 16px;
+    background: #8dd3bb;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 24px 0;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .divider hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background: rgba(17, 34, 17, 0.25);
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .social-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    border: 1px solid #8dd3bb;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .email-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border: 1px solid #8dd3bb;
+    border-radius: 4px;
+    background: none;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .price-summary {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+    height: fit-content;
+  }
+  
+  .hotel-info {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .hotel-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+  
+  .hotel-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .room-type {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.75;
+    color: #000;
+  }
+  
+  .hotel-details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 4px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .rating-score {
+    padding: 9px 11px;
+    border: 1px solid #8dd3bb;
+    border-radius: 4px;
+  }
+  
+  .price-summary hr {
+    margin: 16px 0;
+    border: none;
+    height: 1px;
+    background: rgba(17, 34, 17, 0.25);
+  }
+  
+  .booking-protection {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .price-details h3 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .price-item span:first-child {
+    font-weight: 500;
+  }
+  
+  .price-item span:last-child {
+    font-weight: 600;
+  }
+  
+  .price-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .price-total span:first-child {
+    font-weight: 500;
+  }
+  
+  .price-total span:last-child {
+    font-weight: 600;
+  }
+  
+  .newsletter {
+    background: #8dd3bb;
+    padding: 0 80px 84px;
+    margin-top: 275px;
+  }
+  
+  .newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 147px;
+    background: #cdeae1;
+    border-radius: 20px;
+    padding: 26px;
+    margin-top: -116px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .newsletter-text {
+    flex: 1;
+    max-width: 593px;
+    padding: 17px 0;
+  }
+  
+  .newsletter-text h2 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    color: #000;
+  }
+  
+  .newsletter-description {
+    margin-top: 8px;
+  }
+  
+  .newsletter-description h3 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.8;
+    color: #000;
+  }
+  
+  .newsletter-description p {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 8px;
+    color: #000;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+  }
+  
+  .newsletter-form button {
+    padding: 8px 16px;
+    background: #121;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .newsletter-image {
+    width: 433px;
+    object-fit: contain;
+  }
+  
+  .site-footer {
+    background: #8dd3bb;
+    padding: 30px 80px;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-brand {
+    width: 16%;
+    padding: 10px;
+    display: flex;
+    align-items: start; 
+    justify-content: space-between; 
+  }
+  
+  
+  
+  .footer-logo {
+    width: 160px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 12px;
+    align-items:start;
+  }
+  
+  .social-links img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-nav {
+    width: 84%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .footer-section {
+    width: 176px;
+    min-height: 140px;
+  }
+  
+  .footer-section h4 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+  }
+  
+  .footer-section li {
+    margin-top: 12px;
+  }
+  
+  .footer-section a {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    opacity: 0.7;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      padding: 21px 20px;
+    }
+  
+    .breadcrumb {
+      margin-left: 20px;
+    }
+  
+    .content-wrapper {
+      margin: 29px 20px;
+      flex-direction: column;
+    }
+  
+    .booking-summary,
+    .price-summary {
+      max-width: 100%;
+    }
+  
+    .newsletter {
+      padding: 0 20px 84px;
+    }
+  
+    .newsletter-content {
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+    }
+  
+    .newsletter-text,
+    .newsletter-image {
+      max-width: 100%;
+    }
+  
+    .site-footer {
+      padding: 30px 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-brand,
+    .footer-nav {
+      width: 100%;
+    }
+  
+    .footer-section {
+      width: 100%;
+      min-height: auto;
+    }
+  }
+  
+  

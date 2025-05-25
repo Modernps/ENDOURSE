@@ -1,0 +1,665 @@
+.flight-detail-page {
+    background-color: #fafbfc;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+    font-family:
+      Montserrat,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-header {
+    background-color: #fff;
+    padding: 21px 104px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #121;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .logo {
+    width: 20px;
+    height: 36px;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .favorites-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #121;
+  }
+  
+  .separator {
+    color: #121;
+    font-weight: 600;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    color: #121;
+    font-weight: 600;
+  }
+  
+  .dropdown-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .hero-image {
+    width: 150px;
+    margin-top: 1%;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .content-section {
+    padding: 67px 80px;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 12px;
+  }
+  
+  .breadcrumb-arrow {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .hotel-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 31px;
+    gap: 40px;
+  }
+  
+  .hotel-details {
+    max-width: 374px;
+  }
+  
+  .hotel-name {
+    font-family:
+      "TradeGothic LT Extended",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #121;
+  }
+  
+  .hotel-address {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 16px;
+    font-style: normal;
+    color: rgba(18, 17, 17, 0.75);
+    font-size: 14px;
+  }
+  
+  .address-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .rating-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .rating-score {
+    padding: 9px 11px;
+    border: 1px solid #8dd3bb;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .rating-text {
+    font-size: 12px;
+    color: #121;
+  }
+  
+  .booking-section {
+    text-align: right;
+  }
+  
+  .price {
+    font-size: 32px;
+    color: #ff8682;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .booking-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 6px;
+  }
+  
+  .action-button {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #8dd3bb;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .action-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .book-now {
+    background-color: #8dd3bb;
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+    color: #121;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .main-header {
+      padding: 21px 20px;
+    }
+  
+    .content-section {
+      padding: 40px 20px;
+    }
+  
+    .hotel-info {
+      flex-direction: column;
+    }
+  
+    .hotel-details {
+      max-width: 100%;
+    }
+  
+    .booking-section {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+
+.hotel-overview-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 53px;
+    aspect-ratio: 3.17;
+    object-fit: contain;
+  }
+  
+  .features-section {
+    margin-top: 65px;
+  }
+  
+  .section-title {
+    font-family:
+      "TradeGothic LT Extended",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #121;
+  }
+  
+  .class-options {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  
+  .class-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #121;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .class-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    margin-top: 24px;
+  }
+  
+  .feature-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+  
+  .airline-policies {
+    background-color: rgba(141, 211, 187, 0.6);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 40px;
+  }
+  
+  .policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+  }
+  
+  .policy-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(18, 17, 17, 0.75);
+  }
+  
+  .policy-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .flight-schedule {
+    margin-top: 40px;
+  }
+  
+  .schedule-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+    padding: 32px 23px 32px 8px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .schedule-title {
+    font-family:
+      "TradeGothic LT Extended",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #121;
+  }
+  
+  .airline-details {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+    padding: 16px 32px;
+    border: 0.5px solid #8dd3bb;
+    border-radius: 8px;
+  }
+  
+  .airline-logo {
+    width: 64px;
+    aspect-ratio: 1.42;
+    object-fit: contain;
+  }
+  
+  .airline-info h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .airline-info p {
+    font-size: 14px;
+    color: rgba(18, 17, 17, 0.6);
+    margin: 8px 0 0;
+  }
+  
+  .flight-time {
+    display: flex;
+    gap: 16px;
+    margin-top: 49px;
+  }
+  
+  .flight-time time {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .flight-time p {
+    font-size: 16px;
+    color: rgba(18, 17, 17, 0.6);
+    margin: auto 0;
+  }
+  
+  .flight-duration {
+    text-align: right;
+  }
+  
+  .duration-text {
+    font-size: 20px;
+    color: rgba(18, 17, 17, 0.75);
+  }
+  
+  .duration-icon {
+    width: 393px;
+    aspect-ratio: 3.75;
+    object-fit: contain;
+    margin: 25px 0;
+  }
+  
+  .arrival-info {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .arrival-info time {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .arrival-info p {
+    font-size: 16px;
+    color: rgba(18, 17, 17, 0.6);
+    margin: auto 0;
+  }
+  .schedule-separator {
+    width: 174px;
+    object-fit: contain;
+    margin-top: 10px;
+    position: relative;
+  }
+  .newsletter {
+    background: #8dd3bb;
+    padding: 0 80px 84px;
+    margin-top: 275px;
+  }
+  
+  .newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 147px;
+    background: #cdeae1;
+    border-radius: 20px;
+    padding: 26px;
+    margin-top: -116px;
+    box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  }
+  
+  .newsletter-text {
+    flex: 1;
+    max-width: 593px;
+    padding: 17px 0;
+  }
+  
+  .newsletter-text h2 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    color: #000;
+  }
+  
+  .newsletter-description {
+    margin-top: 8px;
+  }
+  
+  .newsletter-description h3 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.8;
+    color: #000;
+  }
+  
+  .newsletter-description p {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 8px;
+    color: #000;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+  }
+  
+  .newsletter-form button {
+    padding: 8px 16px;
+    background: #121;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .newsletter-image {
+    width: 433px;
+    object-fit: contain;
+  }
+  
+  .site-footer {
+    background: #8dd3bb;
+    padding: 30px 80px;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-brand {
+    width: 16%;
+    padding: 10px;
+    display: flex;
+    align-items: start; 
+    justify-content: space-between; 
+  }
+  
+  
+  
+  .footer-logo {
+    width: 160px;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 12px;
+    align-items:start;
+  }
+  
+  .social-links img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-nav {
+    width: 84%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .footer-section {
+    width: 176px;
+    min-height: 140px;
+  }
+  
+  .footer-section h4 {
+    font-family: "TradeGothic LT Extended", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+  }
+  
+  .footer-section li {
+    margin-top: 12px;
+  }
+  
+  .footer-section a {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  @media (max-width: 991px) {
+    .main-header {
+      padding: 21px 20px;
+    }
+  
+    .content-section {
+      padding: 40px 20px;
+    }
+  
+    .hotel-info {
+      flex-direction: column;
+    }
+  
+    .hotel-details {
+      max-width: 100%;
+    }
+  
+    .booking-section {
+      width: 100%;
+      text-align: left;
+    }
+    .newsletter {
+        padding: 0 20px 84px;
+      }
+    
+      .newsletter-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+      }
+    
+      .newsletter-text,
+      .newsletter-image {
+        max-width: 100%;
+      }
+    
+      .site-footer {
+        padding: 30px 20px;
+      }
+    
+      .footer-content {
+        flex-direction: column;
+      }
+    
+      .footer-brand,
+      .footer-nav {
+        width: 100%;
+      }
+    
+      .footer-section {
+        width: 100%;
+        min-height: auto;
+      }
+    }
+
+  
+  

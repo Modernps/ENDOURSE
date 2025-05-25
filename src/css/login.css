@@ -297,6 +297,15 @@
     border-radius: 0;
   }
   
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
   @media (max-width: 991px) {
     .login {
       padding: 100px 20px;
@@ -380,5 +389,4 @@
       max-width: 100%;
     }
   }
-  
-  
+

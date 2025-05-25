@@ -1,54 +1,65 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.querySelector('form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const loginButton = document.querySelector('.login-button');
+    const passwordToggle = document.querySelector('.password-toggle');
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const togglePassword = document.querySelector(".password-toggle");
-    const passwordInput = document.getElementById("password");
-  
-    togglePassword.addEventListener("click", function () {
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-      } else {
-        passwordInput.type = "password";
-      }
+    // Password visibility toggle
+    passwordToggle.innerHTML = '<img src="./src/assets/images/eye.svg" alt="Show password" />';
+    passwordToggle.addEventListener('click', () => {
+        const type = passwordInput.type === 'password' ? 'text' : 'password';
+        passwordInput.type = type;
+        passwordToggle.innerHTML = type === 'password' 
+            ? '<img src="./src/assets/images/eye.svg" alt="Show password" />'
+            : '<img src="./src/assets/images/eye-off.svg" alt="Hide password" />';
     });
-  });
-  
 
-  // Form Validation Feature
-  const form = document.querySelector("form");
-  const emailInput = document.getElementById("email");
+    // Form validation
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (!emailInput.value || !passwordInput.value) {
+            showError('Please fill in all fields');
+            return;
+        }
 
-  form.addEventListener("submit", function (event) {
-    let isValid = true;
+        // Show loading state
+        loginButton.disabled = true;
+        loginButton.innerHTML = '<span class="spinner"></span> Logging in...';
 
-    // Remove old error messages
-    document.querySelectorAll(".error-message").forEach((el) => el.remove());
+        try {
+            const response = await fetch('src/php/process-login.php', {
+                method: 'POST',
+                body: new FormData(loginForm)
+            });
 
-    // Email Validation
-    if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
-      showError(emailInput, "Please enter a valid email.");
-      isValid = false;
+            const data = await response.json();
+            
+            if (data.success) {
+                window.location.href = 'dashboard.html';
+            } else {
+                showError(data.message || 'Invalid credentials');
+            }
+        } catch (error) {
+            showError('An error occurred. Please try again.');
+        } finally {
+            loginButton.disabled = false;
+            loginButton.innerHTML = 'Login';
+        }
+    });
+
+    function showError(message) {
+        const errorDiv = document.querySelector('.error-message') || document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        
+        const loginHeader = document.querySelector('.login-header');
+        if (!document.querySelector('.error-message')) {
+            loginHeader.insertBefore(errorDiv, loginHeader.firstChild);
+        }
     }
-
-    // Password Validation
-    if (passwordInput.value.length < 6) {
-      showError(passwordInput, "Password must be at least 6 characters.");
-      isValid = false;
-    }
-
-    if (!isValid) {
-      event.preventDefault(); // Stop form submission if validation fails
-    }
-  });
-
-  function showError(input, message) {
-    const errorDiv = document.createElement("div");
-    errorDiv.classList.add("error-message");
-    errorDiv.style.color = "red";
-    errorDiv.style.fontSize = "14px";
-    errorDiv.style.marginTop = "5px";
-    errorDiv.innerText = message;
-    input.parentNode.appendChild(errorDiv);
-  }
+});
 
 
 

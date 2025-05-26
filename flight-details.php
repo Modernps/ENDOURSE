@@ -56,10 +56,6 @@
         
         <section class="content-section">
           <div class="content-container">
-            <div style="width: 100%; margin-top: 40px;">
-              <img src="./src/assets/images/9.png" alt="Flight Image" style="width: 100%; border-radius: 10px; object-fit: cover;">
-            </div>
-            
             <div class="breadcrumb">
               <a href="#">Turkey</a>
               <img src="./src/assets/images/chevron-forward.svg" alt="" class="breadcrumb-separator">
@@ -81,20 +77,22 @@
                 </div>
               </div>
               
-              <div class="price-container">
-                <div class="action-buttons">
+              <div class="price-container" style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+                <b class="price" style="color: red; font-size: 24px;">$240</b>
+                <div style="display: flex; align-items: center; gap: 16px;">
                   <div class="icon-button">
-                    <img src="./src/assets/images/7.svg" alt="" width="20" height="20">
+                    <img src="./src/assets/images/7.svg" alt="Heart" width="20" height="20">
                   </div>
                   <div class="icon-button">
-                    <img src="./src/assets/images/8.svg" alt="" width="20" height="20">
+                    <img src="./src/assets/images/8.svg" alt="Share" width="20" height="20">
                   </div>
-                  <div>
-                    <b class="price">$240</b>
-                    <button class="book-button">Book now</button>
-                  </div>
+                  <button class="book-button">Book now</button>
                 </div>
               </div>
+            </div>
+
+            <div style="width: 100%; margin-top: 40px;">
+              <img src="./src/assets/images/9.png" alt="Flight Image" style="width: 100%; border-radius: 10px; object-fit: cover;">
             </div>
             
             <div class="features-section">

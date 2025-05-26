@@ -16,26 +16,25 @@
     </style>
   </head>
   
-  <main class="booking-detail">
-    <header class="header">
+  <main class="booking-detail">    <header class="header">
       <nav class="nav-container">
         <div class="nav-links">
-          <a href="#" class="nav-item">
+          <a href="./src/pages/find-flights.php" class="nav-item">
             <img src="./src/assets/images/plane.svg" alt="" class="nav-icon" />
             <span>Find Flight</span>
           </a>
-          <a href="#" class="nav-item">
+          <a href="./src/pages/find-stays.php" class="nav-item">
             <img src="./src/assets/images/bed.svg" alt="" class="nav-icon" />
             <span>Find Stays</span>
           </a>
         </div>
         <div class="user-nav">
-          <a href="#" class="nav-item">
+          <a href="./src/pages/favourites.php" class="nav-item">
             <img src="./src/assets/images/heart.svg" alt="" class="nav-icon" />
             <span>Favourites</span>
           </a>
           <span class="separator">|</span>
-          <a href="#" class="user-profile">
+          <a href="./login.php" class="user-profile">
             <img src="./src/assets/images/profile-pic.png" alt="User profile" class="profile-image" />
             <span>John D.</span>
           </a>
@@ -97,10 +96,8 @@
               </a>
             </div>
           </div>
-        </article>
-  
-        <section class="payment-options">
-          <div class="payment-option full-payment">
+        </article>        <section class="payment-options">
+          <div class="payment-option full-payment" onclick="selectPaymentOption(this)">
             <div class="option-content">
               <h3>Pay in full</h3>
               <p>Pay the total and you are all set</p>
@@ -110,11 +107,11 @@
             </div>
           </div>
   
-          <div class="payment-option installment">
+          <div class="payment-option installment" onclick="selectPaymentOption(this)">
             <div class="option-content">
               <h3>Pay part now, part later</h3>
               <p>Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
-              <a href="#" class="more-info">More info</a>
+              <a href="./src/pages/payment-confirmation.php" class="more-info">More info</a>
             </div>
             <div class="radio-button">
               <img src="./src/assets/images/circle.svg" alt="Not selected" />
@@ -130,7 +127,7 @@
             <input type="tel" id="phone" name:phoneno. />
             
           </div>
-          <p class="terms">We'll call or text you to confirm your number. Standard message and data rates apply. <a href="#">Privacy Policy</a></p>
+          <p class="terms">We'll call or text you to confirm your number. Standard message and data rates apply. <a href="./src/pages/privacy-policy.php">Privacy Policy</a></p>
           
           <button type="submit" class="continue-btn">Continue</button>
         </section>
@@ -140,24 +137,22 @@
             <hr />
             <span>Or</span>
             <hr />
-          </div>
-  
-          <div class="social-login">
+          </div>          <div class="social-login">
             <div class="social-buttons">
-              <button class="social-btn">
+              <a href="./src/pages/booking-confirmation.php" class="social-btn">
                 <img src="./src/assets/images/facebook.svg" alt="Facebook" />
-              </button>
-              <button class="social-btn">
+              </a>
+              <a href="./src/pages/booking-confirmation.php" class="social-btn">
                 <img src="./src/assets/images/google.svg" alt="Google" />
-              </button>
-              <button class="social-btn">
+              </a>
+              <a href="./src/pages/booking-confirmation.php" class="social-btn">
                 <img src="./src/assets/images/apple.svg" alt="Apple" />
-              </button>
+              </a>
             </div>
-            <button class="email-btn">
+            <a href="./src/pages/email-login.php" class="email-btn">
               <img src="./src/assets/images/letter-icon.svg" alt="Email" />
               <span>Continue with email</span>
-            </button>
+            </a>
           </div>
         </section>
       </section>
@@ -253,20 +248,18 @@
   
           <div class="footer-section">
             <h4>Our Activities</h4>
-            <ul>
-              <li><a href="#">Northern Lights</a></li>
-              <li><a href="#">Cruising & sailing</a></li>
-              <li><a href="#">Multi-activities</a></li>
-              <li><a href="#">Kayaking</a></li>
+            <ul>              <li><a href="./src/pages/find-stays.php?activity=northern-lights">Northern Lights</a></li>
+              <li><a href="./src/pages/find-stays.php?activity=cruising">Cruising & sailing</a></li>
+              <li><a href="./src/pages/find-stays.php?activity=multi">Multi-activities</a></li>
+              <li><a href="./src/pages/find-stays.php?activity=kayaking">Kayaking</a></li>
             </ul>
           </div>
   
           <div class="footer-section">
             <h4>Travel Blogs</h4>
-            <ul>
-              <li><a href="#">Bali Travel Guide</a></li>
-              <li><a href="#">Sri Lanka Travel Guide</a></li>
-              <li><a href="#">Peru Travel Guide</a></li>
+            <ul>              <li><a href="./src/pages/travel-guide.php?destination=bali">Bali Travel Guide</a></li>
+              <li><a href="./src/pages/travel-guide.php?destination=sri-lanka">Sri Lanka Travel Guide</a></li>
+              <li><a href="./src/pages/travel-guide.php?destination=peru">Peru Travel Guide</a></li>
             </ul>
           </div>
   
@@ -285,8 +278,28 @@
               <li><a href="#">Work with us</a></li>
             </ul>
           </div>
-        </nav>
-      </div>
+        </nav>      </div>
     </footer>
+    
+    <script>
+      function selectPaymentOption(option) {
+        document.querySelectorAll('.payment-option').forEach(el => {
+          el.style.backgroundColor = '';
+          el.querySelector('img').src = './src/assets/images/circle.svg';
+        });
+        
+        option.style.backgroundColor = '#8dd3bb';
+        option.querySelector('img').src = './src/assets/images/1.svg';
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        paymentOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            selectPaymentOption(this);
+          });
+        });
+      });
+    </script>
   </main>
 

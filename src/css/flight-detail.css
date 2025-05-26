@@ -19,25 +19,16 @@ body {
 }
 
 header {
-   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 21px 5%;
-  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+  padding: 20px;
   background-color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .left-nav {
   justify-content: flex-start;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
 }
 
 .right-nav {
@@ -47,18 +38,39 @@ header {
   gap: 16px;
 }
 
+.logo-container {
+  text-align: center;
+  flex-grow: 1;
+  max-width: 200px;
+  height: 36px;
+}
+
 .logo {
+  max-width: 200px;
   height: 36px;
   transition: transform 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   text-decoration: none;
-  color: #112211;
-  font-weight: 500;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -74,8 +86,8 @@ header {
 }
 
 .content-section {
+  padding: 20px;
   width: 100%;
-  padding: 0 5%;
   display: flex;
   justify-content: center;
 }
@@ -92,13 +104,12 @@ header {
   align-items: center;
   gap: 8px;
   margin: 20px 0;
-  color: #FF8682;
-  font-weight: 500;
+  animation: fadeIn 1.5s ease-in;
 }
 
 .breadcrumb a {
+  color: #007bff;
   text-decoration: none;
-  color: #FF8682;
 }
 
 .breadcrumb-separator {
@@ -109,12 +120,13 @@ header {
 .flight-details-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  margin-bottom: 40px;
+  align-items: center;
+  margin: 20px 0;
+  animation: slideIn 1s ease-out;
 }
 
 .flight-info-container {
+  max-width: 60%;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -150,6 +162,7 @@ header {
 }
 
 .price-container {
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -191,6 +204,7 @@ header {
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
+  animation: pulse 2s infinite;
 }
 
 .book-button:hover {
@@ -200,8 +214,8 @@ header {
 }
 
 .features-section {
+  margin: 20px 0;
   width: 100%;
-  margin: 40px 0;
 }
 
 .section-title {
@@ -213,7 +227,7 @@ header {
 
 .feature-options {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -224,9 +238,9 @@ header {
 }
 
 .feature-image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 19px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
   justify-content: center;
 }
 
@@ -243,11 +257,11 @@ header {
 }
 
 .policies-section {
+  margin: 20px 0;
   width: 100%;
   padding: 16px;
   background-color: rgba(141, 211, 187, 0.6);
   border-radius: 8px;
-  margin: 40px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -351,6 +365,8 @@ header {
 }
 
 .footer-container {
+  background-color: #f8f9fa;
+  padding: 20px;
   width: 100%;
   margin-top: 40px;
 }
@@ -366,15 +382,16 @@ footer {
 }
 
 .newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
   width: 100%;
   max-width: 1232px;
   background-color: #cdeae1;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .newsletter-content {
@@ -433,12 +450,11 @@ footer {
 }
 
 .footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   width: 100%;
   max-width: 1232px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .footer-logo {
@@ -476,100 +492,102 @@ footer {
   .flight-details-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
   }
-  
+
   .price-container {
     align-items: flex-start;
   }
-  
+
   .feature-image-grid {
-    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
-  
-  .policy {
-    max-width: 100%;
+
+  .footer-links {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 
 @media screen and (max-width: 992px) {
-  .flight-schedule {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .schedule-separator {
-    transform: rotate(90deg);
-    margin: 20px 0;
-  }
-  
-  .newsletter {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .footer-links {
-    gap: 40px;
-  }
-}
-
-@media screen and (max-width: 768px) {
   header {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
     padding: 15px 3%;
   }
-  
+
   .logo-container {
     order: -1;
   }
-  
+
   .nav-item span {
     display: none;
   }
-  
+
   .feature-options {
     flex-direction: column;
   }
-  
+
   .action-buttons {
     flex-wrap: wrap;
   }
-  
+
   .airline-container {
     padding: 15px;
   }
-  
+
   .footer-column {
     min-width: calc(50% - 20px);
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .flight-title {
     font-size: 20px;
   }
-  
+
   .price {
     font-size: 24px;
   }
-  
+
   .book-button {
     width: 100%;
     text-align: center;
   }
-  
+
   .newsletter-title {
     font-size: 32px;
     line-height: 1.2;
   }
-  
+
   .newsletter-form {
     flex-direction: column;
   }
-  
+
   .footer-column {
     min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .flight-title {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
 
@@ -599,6 +617,15 @@ footer {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
+}
+
+@keyframes logoBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 

@@ -88,17 +88,10 @@
               <img src="./src/assets/images/flight-2.svg" alt="" class="schedule-separator" />
               <div class="schedule-item">
                 <time>14:30 pm</time>
-                <p>Atlanta(ATL)</p>
-              </div>
-            </div>
-            <div class="view-details-wrapper">
-              <a href="flight-details.php" class="view-details-btn">
-                <span>View Flight Details</span>
-                <img src="./src/assets/images/arrow.svg" alt="" class="arrow-icon" />
-              </a>
+                <p>Atlanta(ATL)</p>              </div>
             </div>
           </div>
-        </article>        <section class="payment-options">
+        </article><section class="payment-options">
           <div class="payment-option full-payment" onclick="selectPaymentOption(this)">
             <div class="option-content">
               <h3>Pay in full</h3>
@@ -303,5 +296,7 @@
         });
       });
     </script>
+    <script src="./src/js/flight-booking.js"></script>
+    <script src="./src/js/mobile-responsive.js"></script>
   </main>
 

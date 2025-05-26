@@ -198,7 +198,7 @@
   }
     .amenities-image {
     width: 489px;
-    height: 144.95px;
+    height: 120px;
     object-fit: contain;
     margin: 0;
   }
@@ -675,65 +675,12 @@
     text-decoration: none;
   }
   
-  @media (max-width: 991px) {
-    .header {
-      padding: 21px 20px;
-    }
-  
-    .breadcrumb {
-      margin-left: 20px;
-    }
-  
-    .content-wrapper {
-      margin: 29px 20px;
-      flex-direction: column;
-    }
-  
-    .booking-summary,
-    .price-summary {
-      max-width: 100%;
-    }
-  
-    .newsletter {
-      padding: 0 20px 84px;
-    }
-  
-    .newsletter-content {
-      flex-direction: column;
-      gap: 40px;
-      padding: 20px;
-    }
-  
-    .newsletter-text,
-    .newsletter-image {
-      max-width: 100%;
-    }
-  
-    .site-footer {
-      padding: 30px 20px;
-    }
-  
-    .footer-content {
-      flex-direction: column;
-    }
-  
-    .footer-brand,
-    .footer-nav {
-      width: 100%;
-    }
-  
-    .footer-section {
-      width: 100%;
-      min-height: auto;
-    }
-  }
-  
   .flight-cards {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
     gap: 24px;
+    width: 100%;
   }
   
   .airline-card {
@@ -744,34 +691,352 @@
     border: 0.5px solid #8dd3bb;
     border-radius: 8px;
     background: #fff;
+    flex-shrink: 0;
   }
   
-  .airline-logo {
-    width: 64px;
-    height: 44px;
-    object-fit: contain;
-  }
-  
-  .airline-name {
-    color: #000;
-  }
-  
-  .airline-name h3 {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  .airline-name p {
-    font-size: 14px;
-    font-weight: 500;
-    opacity: 0.6;
-    margin-top: 8px;
-  }
-    .amenities-card {
+  .amenities-card {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 16px;
-    background: transparent;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  
+    .header {
+      padding: 16px;
+    }
+  
+    .nav-container {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .nav-links, .user-nav {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .nav-item span {
+      display: none;
+    }
+  
+    .hero-image {
+      width: 100px;
+      margin: -50px auto 0;
+    }
+  
+    .breadcrumb {
+      margin: 24px 16px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+  
+    .content-wrapper {
+      margin: 20px 16px;
+      flex-direction: column;
+      gap: 24px;
+    }
+  
+    .booking-summary, .price-summary {
+      max-width: 100%;
+    }
+  
+    .flight-card {
+      padding: 16px;
+    }
+  
+    .flight-header {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+  
+    .flight-title h1 {
+      font-size: 20px;
+    }
+  
+    .flight-price {
+      font-size: 24px;
+    }
+  
+    .flight-info {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .flight-info span:first-child {
+      font-size: 14px;
+    }
+  
+    .flight-info span:last-child {
+      font-size: 16px;
+    }
+  
+    .airline-info {
+      padding: 12px;
+      gap: 12px;
+      width: 100%;
+    }
+  
+    .airline-logo {
+      width: 48px;
+      height: 32px;
+    }
+  
+    .airline-name h3 {
+      font-size: 18px;
+    }
+  
+    .airline-name p {
+      font-size: 12px;
+    }
+  
+    .amenities {
+      padding: 8px;
+    }
+  
+    .amenities-image {
+      width: 100%;
+      height: auto;
+      max-height: 80px;
+    }
+  
+    .flight-schedule {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      margin-top: 24px;
+    }
+  
+    .schedule-separator {
+      width: 80px;
+      transform: rotate(90deg);
+      margin: 8px 0;
+    }
+  
+    .schedule-item {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .schedule-item time {
+      font-size: 16px;
+    }
+  
+    .schedule-item p {
+      font-size: 14px;
+    }
+  
+    .payment-options {
+      margin-top: 24px;
+    }
+  
+    .payment-option {
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px;
+    }
+  
+    .radio-button {
+      align-self: flex-end;
+      width: 36px;
+      height: 36px;
+    }
+  
+    .social-buttons {
+      flex-wrap: wrap;
+    }
+  
+    .social-btn {
+      padding: 12px;
+    }
+  
+    .email-btn {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .hotel-info {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .hotel-image {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+  
+    .newsletter {
+      padding: 16px;
+      margin-top: 40px;
+    }
+  
+    .newsletter-content {
+      flex-direction: column;
+      padding: 16px;
+      gap: 24px;
+    }
+  
+    .newsletter-text h2 {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .newsletter-image {
+      display: none;
+    }
+  
+    .footer-content {
+      padding: 24px 16px;
+    }
+  
+    .footer-nav {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .content-wrapper {
+      margin: 24px;
+      gap: 24px;
+    }
+  
+    .booking-summary {
+      flex: 2;
+    }
+  
+    .price-summary {
+      flex: 1;
+    }
+  
+    .flight-cards {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .airline-info {
+      width: 100%;
+    }
+  
+    .amenities-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .newsletter-content {
+      padding: 24px;
+      gap: 32px;
+    }
+  
+    .newsletter-text {
+      max-width: 50%;
+    }
+  
+    .newsletter-image {
+      max-width: 40%;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .flight-title h1 {
+      font-size: 20px;
+    }
+  
+    .flight-info span:first-child {
+      font-size: 14px;
+    }
+  
+    .flight-info span:last-child {
+      font-size: 16px;
+    }
+  
+    .airline-name h3 {
+      font-size: 18px;
+    }
+  
+    .social-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-height: 600px) and (orientation: landscape) {
+    .header {
+      position: relative;
+    }
+  
+    .content-wrapper {
+      margin-top: 16px;
+    }
+  
+    .newsletter {
+      margin-top: 24px;
+    }
+  }
+  
+  /* Header responsive styles */
+  @media screen and (max-width: 768px) {
+    .header {
+      padding: 16px;
+    }
+  
+    .nav-container {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .nav-links {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .user-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .nav-item span {
+      display: none;
+    }
+  
+    .user-profile span {
+      display: none;
+    }
+  
+    .separator {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .header {
+      padding: 12px;
+    }
+  
+    .nav-links {
+      gap: 16px;
+    }
+  
+    .user-nav {
+      gap: 16px;
+    }
+  
+    .profile-image {
+      width: 35px;
+      height: 35px;
+    }
   }
 

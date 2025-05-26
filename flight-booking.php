@@ -66,16 +66,18 @@
           <div class="flight-info">
             <span>Return Wed, Dec 8</span>
             <span>2h 28m</span>
-          </div>
-  
-          <div class="flight-details">
-            <div class="airline-info">
-              <img src="./src/assets/images/emirates-logo.png" alt="Emirates logo" class="airline-logo" />
-              <div class="airline-name">
-                <h3>Emirates</h3>
-                <p>Airbus A320</p>
+          </div>          <div class="flight-details">
+            <div class="flight-cards">
+              <div class="airline-card">
+                <img src="./src/assets/images/emirates-logo.png" alt="Emirates logo" class="airline-logo" />
+                <div class="airline-name">
+                  <h3>Emirates</h3>
+                  <p>Airbus A320</p>
+                </div>
               </div>
-              <img src="./src/assets/images/amenities.png" alt="" class="flight-path" />
+              <div class="amenities-card">
+                <img src="./src/assets/images/amenities.png" alt="Flight amenities" class="amenities-image" />
+              </div>
             </div>
   
             <div class="flight-schedule">

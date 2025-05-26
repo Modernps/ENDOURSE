@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordInput.type = type;
         passwordToggle.innerHTML = type === 'password' 
             ? '<img src="./src/assets/images/hide-password.svg" alt="Show password" />'
-            : '<img src="./src/assets/images/eye-off.svg" alt="Hide password" />';
+            : '<img src="./src/assets/images/hide-password.svg" alt="Hide password" />';
     });
 
     loginForm.addEventListener('submit', async (e) => {

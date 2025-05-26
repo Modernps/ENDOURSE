@@ -35,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Redirect if accessed directly without POST
 header("Location: ../../login.php");
 exit();
 

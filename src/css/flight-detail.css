@@ -20,7 +20,6 @@ body {
   flex-direction: column;
 }
 
-/* Base responsive settings */
 :root {
   --padding-mobile: 16px;
   --padding-tablet: 24px;
@@ -365,11 +364,11 @@ body {
   overflow-x: auto;
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .feature-image-grid::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none;
 }
 
 .feature-image {
@@ -754,7 +753,6 @@ footer {
   }
 }
 
-/* Tablet styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .header {
     padding: 16px 32px;

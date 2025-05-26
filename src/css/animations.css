@@ -1,4 +1,3 @@
-/* Animation keyframes */
 @keyframes slideIn {
   from {
     transform: translateY(20px);
